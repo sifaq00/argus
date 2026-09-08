@@ -39,7 +39,7 @@ export async function GET() {
     else if (kpIndex >= 6) { stormLevel = 'Strong (G3)'; stormColor = '#FF9500'; }
     else if (kpIndex >= 5) { stormLevel = 'Moderate (G2)'; stormColor = '#FFD700'; }
     else if (kpIndex >= 4) { stormLevel = 'Minor (G1)'; stormColor = '#FFD700'; }
-    else if (kpIndex >= 3) { stormLevel = 'Unsettled'; stormColor = '#D4AF37'; }
+    else if (kpIndex >= 3) { stormLevel = 'Unsettled'; stormColor = '#00E676'; }
 
     // Recent alerts
     const alerts: any[] = [];

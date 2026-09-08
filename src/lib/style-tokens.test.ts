@@ -131,13 +131,13 @@ describe('buildVars', () => {
 
   it('keeps the active border stronger than the resting one', () => {
     const v = buildVars(settings({ borderAlpha: 0.2 }));
-    expect(v['--border-active']).toBe('rgba(212, 175, 55, 0.48)');
-    expect(v['--border-secondary']).toBe('rgba(212, 175, 55, 0.09)');
+    expect(v['--border-active']).toBe('rgba(0, 230, 118, 0.48)');
+    expect(v['--border-secondary']).toBe('rgba(0, 230, 118, 0.09)');
   });
 
   it('never lets a derived alpha exceed 1', () => {
     const v = buildVars(settings({ borderAlpha: 0.6 }));
-    expect(v['--border-active']).toBe('rgba(212, 175, 55, 1)');
+    expect(v['--border-active']).toBe('rgba(0, 230, 118, 1)');
   });
 
   it('uses the stored surface ramp rather than re-deriving it', () => {

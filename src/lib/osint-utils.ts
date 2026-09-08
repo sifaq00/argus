@@ -135,7 +135,7 @@ export function classifyDevice(
     return { device_type: 'FTP Server', device_icon: 'HardDrive', device_color: '#FFD700' };
   }
   if (portSet.has(1194) || portSet.has(1723) || portSet.has(500) || portSet.has(4500) || cpeLower.some((c) => /openvpn|wireguard/.test(c))) {
-    return { device_type: 'VPN Gateway', device_icon: 'ShieldCheck', device_color: '#D4AF37' };
+    return { device_type: 'VPN Gateway', device_icon: 'ShieldCheck', device_color: '#00E676' };
   }
   if (portSet.has(3389)) {
     return { device_type: 'Windows Workstation', device_icon: 'Monitor', device_color: '#E040FB' };

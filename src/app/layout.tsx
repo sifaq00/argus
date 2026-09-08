@@ -8,7 +8,7 @@ const SITE_TITLE = "ARGUS — Open Source Intelligence Platform | Live Flight Tr
 const SITE_DESCRIPTION = "ARGUS watches live global data — flights, satellites, earthquakes, wildfires, cyber threats and conflicts — and reports what changed. DNS lookups, WHOIS queries, SSL analysis and threat intel from your browser. Free & open source.";
 
 export const viewport: Viewport = {
-  themeColor: "#D4AF37",
+  themeColor: "#00E676",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,

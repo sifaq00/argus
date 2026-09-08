@@ -299,7 +299,7 @@ function ArgusMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCli
       createIcon(map, 'plane-pink', flightGov, 24);    
       createIcon(map, 'plane-red', flightMil, 24);     
       createIcon(map, 'plane-grey', boot.flightUnknown, 24);
-      createDot(map, 'dot-gold', isGhost ? phantomPurple : '#D4AF37', 8);
+      createDot(map, 'dot-gold', isGhost ? phantomPurple : '#00E676', 8);
       createDot(map, 'dot-red', isGhost ? phantomPurple : '#D32F2F', 10);
       createDot(map, 'dot-orange', isGhost ? phantomPurple : '#E65100', 10);
       createDot(map, 'dot-green', isGhost ? phantomPurple : '#26A69A', 10);
@@ -2487,7 +2487,7 @@ function ArgusMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCli
         id: 'directions-active-line', type: 'line', source: SRC_ACTIVE,
         layout: { 'line-cap': 'round', 'line-join': 'round' },
         paint: {
-          'line-color': '#D4AF37',
+          'line-color': '#00E676',
           'line-width': ['interpolate', ['linear'], ['zoom'], 5, 4, 14, 9],
           'line-opacity': 0.95,
         },
@@ -2749,7 +2749,7 @@ function ArgusMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCli
 
     currentLayers.forEach(layer => {
       const sourceId = `arcgis-${layer.id}`;
-      const c = layer.color || '#D4AF37';
+      const c = layer.color || '#00E676';
       const o = layer.opacity ?? 0.8;
       if (!map.getSource(sourceId)) {
         map.addSource(sourceId, { type: 'geojson', data: layer.geojson });

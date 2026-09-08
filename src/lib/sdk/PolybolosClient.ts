@@ -97,7 +97,7 @@ function translateSatellites(sats: any[]): PolybolosEntity[] {
     source: { provider: 'argus', feed: 'satnogs', originalId: s.noradId?.toString(), confidence: 0.95 },
     timestamp: new Date().toISOString(),
     properties: { mission: s.mission, noradId: s.noradId, color: s.color },
-    display: { color: s.color || '#D4AF37', icon: 'dot-gold', layerType: 'circle' as const },
+    display: { color: s.color || '#00E676', icon: 'dot-gold', layerType: 'circle' as const },
   }));
 }
 

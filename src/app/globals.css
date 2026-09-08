@@ -7,7 +7,7 @@
    ═══════════════════════════════════════════════════════════════ */
 
 :root {
-  --gold-rgb: 212, 175, 55;
+  --gold-rgb: 0, 230, 118;
   --cyan-rgb: 0, 229, 255;
   /* ── Core Palette ── */
   --bg-void: #04040A;
@@ -18,9 +18,9 @@
   --bg-panel-solid: #0C0E1A;
 
   /* ── Gold Accent (Eye of Horus) ── */
-  --gold-primary: #D4AF37;
-  --gold-light: #F0D060;
-  --gold-dim: #8B7325;
+  --gold-primary: #00E676;
+  --gold-light: #69F0AE;
+  --gold-dim: #007A43;
   --gold-glow: rgba(var(--gold-rgb), 0.3);
 
   /* ── Cyan Intel Stream ── */
@@ -65,7 +65,7 @@
   --text-secondary: #9B978E;
   --text-muted: #5C5A54;
   --text-heading: #F5F0E0;
-  --text-gold: #D4AF37;
+  --text-gold: #00E676;
   --text-cyan: #00E5FF;
 
   /* ── Scrollbar ── */
@@ -185,7 +185,7 @@ html:has(.docs-root) body {
 .docs-code { color: #C9D1D9; }
 .docs-code .tok-key { color: var(--gold-primary); }
 .docs-code .tok-str { color: #A5D6A7; }
-.docs-code .tok-num { color: #F0D060; }
+.docs-code .tok-num { color: #69F0AE; }
 .docs-code .tok-lit { color: #B388FF; }
 .docs-code .tok-kw  { color: #FF7B9C; }
 .docs-code .tok-fn  { color: var(--cyan-primary); }
@@ -348,7 +348,7 @@ html:has(.docs-root) body {
 /* ── Risk Badges ── */
 .risk-critical { color: #FF3D3D; text-shadow: 0 0 8px rgba(255, 61, 61, 0.5); }
 .risk-high { color: #FF9500; text-shadow: 0 0 8px rgba(255, 149, 0, 0.3); }
-.risk-medium { color: #D4AF37; }
+.risk-medium { color: #00E676; }
 .risk-low { color: #00E676; }
 
 /* ── CRT Scanlines ── */
@@ -1500,7 +1500,7 @@ html:has(.docs-root) body {
 }
 .gotham-tag--critical { background: rgba(255,61,61,0.12); color: #FF3D3D; border-color: rgba(255,61,61,0.3); }
 .gotham-tag--high { background: rgba(255,149,0,0.12); color: #FF9500; border-color: rgba(255,149,0,0.3); }
-.gotham-tag--medium { background: rgba(var(--gold-rgb),0.12); color: #D4AF37; border-color: rgba(var(--gold-rgb),0.3); }
+.gotham-tag--medium { background: rgba(var(--gold-rgb),0.12); color: #00E676; border-color: rgba(var(--gold-rgb),0.3); }
 .gotham-tag--low { background: rgba(0,230,118,0.12); color: #00E676; border-color: rgba(0,230,118,0.3); }
 .gotham-tag--info { background: rgba(var(--cyan-rgb),0.08); color: var(--cyan-primary); border-color: rgba(var(--cyan-rgb),0.2); }
 .gotham-tag--classified { background: rgba(var(--gold-rgb),0.08); color: var(--gold-primary); border-color: rgba(var(--gold-rgb),0.25); letter-spacing: 0.2em; }
@@ -2375,12 +2375,12 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 50%;
   background: var(--gold-primary);
   cursor: pointer;
-  box-shadow: 0 0 8px rgba(212,175,55,0.4);
+  box-shadow: 0 0 8px rgba(0,230,118,0.4);
   border: 2px solid rgba(0,0,0,0.3);
   transition: box-shadow 0.15s;
 }
 input[type="range"]::-webkit-slider-thumb:hover {
-  box-shadow: 0 0 14px rgba(212,175,55,0.6);
+  box-shadow: 0 0 14px rgba(0,230,118,0.6);
 }
 input[type="range"]::-moz-range-thumb {
   width: 14px;
@@ -2388,7 +2388,7 @@ input[type="range"]::-moz-range-thumb {
   border-radius: 50%;
   background: var(--gold-primary);
   cursor: pointer;
-  box-shadow: 0 0 8px rgba(212,175,55,0.4);
+  box-shadow: 0 0 8px rgba(0,230,118,0.4);
   border: 2px solid rgba(0,0,0,0.3);
 }
 
