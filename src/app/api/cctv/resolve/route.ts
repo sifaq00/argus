@@ -95,9 +95,9 @@ export async function GET(req: Request) {
   let value: Resolution;
   try {
     const res = await safeFetch(url, {
-      signal: AbortSignal.timeout(10_000),
+      signal: AbortSignal.timeout(6000),
       headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; ARGUS/1.0; +https://github.com/simplifaisoul/argus)',
+        'User-Agent': 'Mozilla/5.0 (compatible; ARGUS/1.0; +https://github.com/sifaq00/argus)',
         Accept: 'text/html,application/xhtml+xml',
       },
     });

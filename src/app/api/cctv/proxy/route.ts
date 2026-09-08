@@ -57,7 +57,7 @@ function proxyFetch(url: string, referer: string | null): Promise<{ status: numb
 
     const options: any = {
       headers,
-      timeout: 12000,
+      timeout: 8000,
     };
 
     if (isHttps) {
