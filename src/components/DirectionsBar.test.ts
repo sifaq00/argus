@@ -63,12 +63,12 @@ describe('viaRoad', () => {
 describe('arrivalTime', () => {
   it('adds the trip duration to the clock', () => {
     const at = arrivalTime(30 * 60, new Date('2026-01-01T12:00:00'));
-    expect(at).toMatch(/12:30|00:30/); // locale may render 12h or 24h
+    expect(at).toMatch(/12[:.]30|00[:.]30/); // locale may render 12h/24h, colon/dot
   });
 
   it('rolls past midnight', () => {
     const at = arrivalTime(2 * 3600, new Date('2026-01-01T23:00:00'));
-    expect(at).toMatch(/01:00|1:00/);
+    expect(at).toMatch(/01[:.]00|1[:.]00/); // ID locale uses dots
   });
 });
 
