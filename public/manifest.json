@@ -1,0 +1,31 @@
+{
+  "name": "ARGUS — Global Intelligence Platform",
+  "short_name": "ARGUS",
+  "description": "ARGUS watches live global data and reports what changed. Track 10K+ aircraft, 2K satellites, earthquakes, wildfires, cyber threats and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#06060C",
+  "theme_color": "#D4AF37",
+  "orientation": "landscape-primary",
+  "categories": ["security", "intelligence", "analytics", "news"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/argus-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
