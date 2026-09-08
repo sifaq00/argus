@@ -55,7 +55,17 @@ export async function POST(req: Request) {
   try {
     parsed = JSON.parse(stripFences(content));
   } catch {
-    return NextResponse.json({ error: 'LLM invalid JSON', raw: content.slice(0, 500) }, { status: 502 });
+    // LLM flaked (empty/non-JSON). Fall back to a rule-based summary so the
+    // feed never dead-ends; the raw snippet goes to function logs.
+    console.error('[agent] LLM unparseable, len=%d head=%s', content.length, content.slice(0, 200));
+    const top = (hot.length ? hot : rows).slice(0, 3).map((r) => `${r.source} ${r.count}`).join(', ');
+    parsed = {
+      severity: hot.length ? 'ELEVATED' : 'LOW',
+      summary: hot.length
+        ? `Anomalous activity: ${top} above 7-day baseline.`
+        : `All quiet. Latest counts: ${top || 'no data'}.`,
+      details: { notes: 'Rule-based fallback; LLM response unparseable.', captured_at },
+    };
   }
   const { data: ins, error } = await db.from('analyses').insert({
     model: LLM_MODEL, severity: parsed.severity ?? 'LOW',
