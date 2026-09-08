@@ -1,0 +1,22 @@
+name: agent-snapshot
+
+# Hobby cron is daily-only, so the 30-minute cadence runs here (free tier).
+# Required repo secrets: ARGUS_URL (e.g. https://argus.vercel.app), CRON_SECRET.
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: snapshot
+        run: |
+          curl -fsS -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            "${{ secrets.ARGUS_URL }}/api/agent/snapshot" --max-time 100
+      - name: analyze
+        run: |
+          curl -fsS -X POST "${{ secrets.ARGUS_URL }}/api/agent/analyze" --max-time 100
