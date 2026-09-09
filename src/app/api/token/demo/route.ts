@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 export const dynamic = 'force-dynamic';
 
-const MINT = 'jNbSbe3PSHrUfBdNhLcY2F3UYpUERbXFw4ygLe2NndW';
+const MINT = 'FKtroyNpHjm65enDZqX6M3MF7rRmwKzrh5NWF36RzhXd';
 const RPC = 'https://api.devnet.solana.com';
 
 async function rpc(method: string, params: unknown[]) {
