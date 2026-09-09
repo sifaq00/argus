@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { API_GROUPS, ENDPOINT_COUNT, endpointId } from './apiCatalog';
 import { Callout, Code, CodeBlock, Pre, Section } from './docsPrimitives';
 import EndpointCard from './EndpointCard';
+import TokenDemo from '@/components/TokenDemo';
 import CommandPalette, { buildPaletteItems } from './CommandPalette';
 
 const GUIDE_SECTIONS = [
@@ -328,6 +329,15 @@ export default function DocsClient() {
               Aviation, maritime, satellites, fires, earthquakes, weather, news, and CVE data all come from public
               keyless feeds. Keys only matter for the optional RECON scanner and for raising rate limits.
             </Callout>
+          </Section>
+
+          <Section id="token-demo" eyebrow="Live" title="Token Demo (Devnet)">
+            <p>
+              Proof of testnet: the $ARGUS drill token lives on Solana devnet.
+              Supply, mint and recent transactions below are read live from the
+              chain via <Code>/api/token/demo</Code>.
+            </p>
+            <TokenDemo />
           </Section>
 
           <Section id="quickstart" eyebrow="Guide" title="Quick Start">
