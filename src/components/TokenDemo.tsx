@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+import TokenChart from './TokenChart';
 
 interface Demo {
   network: string;
@@ -25,6 +26,7 @@ export default function TokenDemo() {
   if (!data) return <div className="hud-label">TOKEN DEMO: LOADING DEVNET…</div>;
   return (
     <div>
+      <div className="mb-3"><TokenChart /></div>
       <div className="hud-label mb-2">ARGUS TOKEN DEMO — {data.network.toUpperCase()}</div>
       <div className="mb-1">SUPPLY: {data.supply}</div>
       <div className="mb-2 break-all">MINT: {data.mint}</div>

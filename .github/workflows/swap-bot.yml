@@ -1,0 +1,28 @@
+name: swap-bot
+
+# Keeps the devnet demo chart alive: dust swap every 15 minutes, alternating sides.
+# Required repo secrets: HELIUS_KEY, DRILL_SECRET (JSON array), SUPABASE_URL,
+#   SUPABASE_SERVICE_ROLE_KEY.
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+jobs:
+  swap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: node scripts/swap-bot.mjs
+        env:
+          HELIUS_KEY: ${{ secrets.HELIUS_KEY }}
+          DRILL_SECRET: ${{ secrets.DRILL_SECRET }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
