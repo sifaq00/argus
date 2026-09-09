@@ -10,6 +10,7 @@ import CommandPalette, { buildPaletteItems } from './CommandPalette';
 
 const GUIDE_SECTIONS = [
   { id: 'overview', title: 'Overview' },
+  { id: 'token-demo', title: 'Token Demo (Live)' },
   { id: 'quickstart', title: 'Quick Start' },
   { id: 'self-hosting', title: 'Self-Hosting' },
   { id: 'configuration', title: 'Configuration' },
