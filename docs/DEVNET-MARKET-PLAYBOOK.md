@@ -98,6 +98,11 @@ await setAuthority(connection, dev, mint, dev.publicKey, AuthorityType.FreezeAcc
 6 decimals = pump.fun standard. Revoking both authorities locks supply forever
 (proof point for the announcement post).
 
+> ORDER MATTERS: create Metaplex metadata (name/symbol/uri) BEFORE revoking
+> authorities. `createMetadataAccountV3` requires the mint authority signature;
+> once revoked (None), NO ONE can ever create metadata for that mint — explorer
+> shows "Unknown Token" forever (we hit exactly this). Metadata first, lock last.
+
 ## Step 4 — Check Orca devnet prerequisites
 
 ```js
