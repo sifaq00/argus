@@ -51,12 +51,12 @@ export default function TokenChart() {
             wickUpColor: '#00E676', wickDownColor: '#FF3D3D',
           });
         }
-        const { candles, marks } = toCandles(trades, 300);
+        const { candles, marks } = toCandles(trades, 60);
         series!.setData(candles);
         createSeriesMarkers(series!, marks.map((m) => ({
           time: m.time as UTCTimestamp, position: m.side === 'buy' ? 'belowBar' : 'aboveBar',
           color: m.side === 'buy' ? '#00E676' : '#FF3D3D',
-          shape: m.side === 'buy' ? 'arrowUp' : 'arrowDown', text: m.side === 'buy' ? 'B' : 'S',
+          shape: 'circle', size: 1,
         })));
         chart!.timeScale().fitContent();
         const last = trades[trades.length - 1];
