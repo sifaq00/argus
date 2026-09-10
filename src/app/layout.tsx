@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import ErrorBoundary from '@/components/ErrorBoundary';
 import "./globals.css";
 
+// ARGUS Sovereign Intelligence Platform
 const SITE_URL = "https://argus.app";
 const SITE_NAME = "ARGUS";
 const SITE_TITLE = "ARGUS — Open Source Intelligence Platform | Live Flight Tracking, OSINT Tools & More";
@@ -69,21 +70,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
-      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
-      { url: "/android-chrome-192x192.png", type: "image/png", sizes: "192x192" },
-      { url: "/android-chrome-512x512.png", type: "image/png", sizes: "512x512" },
+      { url: "/argus-logo.webp?v=2", type: "image/webp" },
     ],
     apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180" },
+      { url: "/argus-logo.webp?v=2" },
     ],
-    shortcut: "/favicon.ico",
-    other: [
-      {
-        rel: "apple-touch-icon-precomposed",
-        url: "/apple-touch-icon.png",
-      },
-    ],
+    shortcut: "/argus-logo.webp?v=2",
   },
   manifest: "/site.webmanifest",
   alternates: {
@@ -179,10 +171,8 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/webp" href="/argus-logo.webp?v=2" />
+        <link rel="apple-touch-icon" href="/argus-logo.webp?v=2" />
         <link rel="canonical" href={SITE_URL} />
         
         {/* JSON-LD Structured Data */}

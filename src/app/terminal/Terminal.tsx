@@ -1,5 +1,7 @@
 'use client';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 import {
   CandlestickSeries, HistogramSeries, createChart,
   type IChartApi, type ISeriesApi, type UTCTimestamp,
@@ -121,6 +123,11 @@ export default function Terminal() {
   return (
     <div className="min-h-screen bg-[#0a0e14] text-white">
       <header className="flex items-center gap-4 px-4 py-2 border-b border-white/10 font-mono">
+        <Link href="/" className="flex items-center gap-2.5 text-white/80 hover:text-white transition-opacity">
+          <Image src="/argus-logo.webp" alt="ARGUS" width={28} height={28} className="rounded-md object-contain" />
+          <span className="text-sm font-bold tracking-[0.2em] text-[#00E676]">ARGUS</span>
+        </Link>
+        <span className="text-white/20">|</span>
         <span className="font-bold">DRILL/SOL</span>
         <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#00E676]/15 text-[#00E676]">DEVNET · PAPER</span>
         <span className="text-2xl font-bold" style={{ color: up ? '#00E676' : '#FF3D3D' }}>

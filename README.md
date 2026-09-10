@@ -119,5 +119,3 @@ Without `SUPABASE_*` + `LLM_*`, the map still works; agent feed returns 503 by d
 ## License
 
 MIT — see [LICENSE](LICENSE) for details.
-
-Built on top of [OSIRIS](https://github.com/simplifaisoul/osiris) (MIT).

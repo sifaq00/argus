@@ -164,16 +164,28 @@ html, body {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* ── Scrollable document pages (docs) ──
+/* ── Scrollable document pages (docs, landing) ──
    The rules above lock the viewport for the fullscreen map. Long-form pages
-   opt out by rendering .docs-root, which releases the lock without affecting
-   the map. */
+   opt out by rendering .docs-root or .landing-root, which releases the lock
+   without affecting the map. */
 html:has(.docs-root),
 html:has(.docs-root) body {
   height: auto;
   overflow-x: hidden;
   overflow-y: auto;
   scroll-behavior: smooth;
+}
+
+html:has(.landing-root) {
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+html:has(.landing-root) body {
+  height: auto;
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
 @media (prefers-reduced-motion: reduce) {
