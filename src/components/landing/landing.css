@@ -436,7 +436,7 @@ html:has(.landing-root) body {
 }
 
 .landing-root .landing-globe-canvas.is-ready {
-  opacity: 0.66;
+  opacity: 0.32;
 }
 
 .landing-root .landing-globe-vignette {
